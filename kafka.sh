@@ -1,17 +1,14 @@
 #!/bin/bash
 jdk8="/usr/local/jdk8"
-if [ ! -d "$jdk8" ];then
-echo "jdk not exist down jdk8"
-./jdk8.sh
-fi
+
 mkdir repo
 cd repo 
-#curl "http://apache.stu.edu.tw/kafka/2.1.0/kafka_2.11-2.1.0.tgz"  -o kafka_2.11-2.1.0.tgz
-#tar zxf kafka_2.11-2.1.0.tgz
-#mkdir -p /data/kafka_2.11-2.1.0
-#mv kafka_2.11-2.1.0/* /data/kafka_2.11-2.1.0
+curl "http://apache.stu.edu.tw/kafka/2.1.0/kafka_2.11-2.1.0.tgz"  -o kafka_2.11-2.1.0.tgz
+tar zxf kafka_2.11-2.1.0.tgz
+mkdir -p /data/kafka_2.11-2.1.0
+mv kafka_2.11-2.1.0/* /data/kafka_2.11-2.1.0
 
-#set kafka conf 
+set kafka conf 
 host=$2
 mkdir -p /data/kafka_2.11-2.1.0/config/databus-kafka
 kafka_conf="/data/kafka_2.11-2.1.0/config/databus-kafka/server.properties" 
