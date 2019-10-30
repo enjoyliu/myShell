@@ -1,9 +1,6 @@
 #!/bin/bash
 jdk8="/usr/local/jdk8"
 
-mkdir repo
-cd repo 
-wget https://archive.apache.org/dist/kafka/2.1.0/kafka_2.11-2.1.0.tgz
 tar zxf kafka_2.11-2.1.0.tgz
 mkdir -p /data/kafka_2.11-2.1.0
 mv kafka_2.11-2.1.0/* /data/kafka_2.11-2.1.0
