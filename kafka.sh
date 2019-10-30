@@ -5,7 +5,6 @@ tar zxf kafka_2.11-2.1.0.tgz
 mkdir -p /data/kafka_2.11-2.1.0
 mv kafka_2.11-2.1.0/* /data/kafka_2.11-2.1.0
 
-set kafka conf 
 host=$2
 mkdir -p /data/kafka_2.11-2.1.0/config/databus-kafka
 kafka_conf="/data/kafka_2.11-2.1.0/config/databus-kafka/server.properties" 
@@ -49,4 +48,4 @@ stdout_logfile_maxbytes=100MB
 stdout_logfile_backups=5
 stderr_logfile_maxbytes=100MB
 stderr_logfile_backups=5
-environment=JAVA_HOME="/usr/local/jdk8",JRE_HOME="/usr/local/jdk8/jre",KAFKA_OPTS="-javaagent:/data/kafka_2.11-2.1.0/bin/jmx_prometheus_javaagent-0.9.jar=7072:/data/kafka_2.11-2.1.0/bin/kafka-0-8-2.yml",KAFKA_HEAP_OPTS="-Xmx6g -Xms6g -XX:MetaspaceSize=96m -XX:G1HeapRegionSize=16M -XX:MinMetaspaceFreeRatio=50 -XX:MaxMetaspaceFreeRatio=80"'>$supervisor_path
+environment=JAVA_HOME="/usr/local/jdk8",KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$2 -Djava.net.preferIPv4Stack=true",JMX_PORT="7072"
