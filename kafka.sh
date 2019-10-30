@@ -12,7 +12,7 @@ set kafka conf
 host=$2
 mkdir -p /data/kafka_2.11-2.1.0/config/databus-kafka
 kafka_conf="/data/kafka_2.11-2.1.0/config/databus-kafka/server.properties" 
-zk_path="172.22.33.174:2181,172.22.33.183:2181,172.22.33.185:2181"
+zk_path="$2:2181,$2:2181,$2:2181"
 echo "broker.id=$1">$kafka_conf
 echo "host.name=$host">>$kafka_conf
 echo "zookeeper.connect=$zk_path/databus-kafka">>$kafka_conf
