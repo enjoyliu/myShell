@@ -48,4 +48,4 @@ stdout_logfile_maxbytes=100MB
 stdout_logfile_backups=5
 stderr_logfile_maxbytes=100MB
 stderr_logfile_backups=5
-environment=JAVA_HOME="/usr/local/jdk8",KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$2 -Djava.net.preferIPv4Stack=true",JMX_PORT="7072"
+environment=JAVA_HOME="/usr/local/jdk8",KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$2 -Djava.net.preferIPv4Stack=true",JMX_PORT="7072"'>$supervisor_path
